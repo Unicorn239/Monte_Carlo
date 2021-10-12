@@ -1,0 +1,8 @@
+dash
+dash-renderer
+dash-core-components
+dash-html-components
+dash-bootstrap-components
+pandas
+numpy
+gunicorn
