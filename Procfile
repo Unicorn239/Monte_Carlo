@@ -1,1 +1,1 @@
-web: gunicorn monte-carlo:server
+web: gunicorn monte_carlo:server
