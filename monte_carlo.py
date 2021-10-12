@@ -232,9 +232,11 @@ def update_result(params, coeff, range_A, range_B, range_C):
     predicted_min = result.min()
     predicted_max = result.max()
     
-    result_txt = '(%s, %s)' %(np.round(predicted_min, 4), np.round(predicted_max, 4))
+    message = dbc.Label('lower limit = %s  upper limit = %s' %(round(predicted_min, 4), \
+                                                               round(predicted_max, 4)),
+                         color = 'success')
     
-    return result_txt
+    return message
 
 #     return ' '.join(df.columns.tolist())
 
@@ -297,7 +299,7 @@ def update_graph(params, coeff, range_A, range_B, range_C):
     fig.layout.title = 'Monte Carlo simulation'
     fig.layout.xaxis.title = 'Distribution'
     fig.layout.yaxis.title = 'Frequency'
-    fig.layout.template = 'plotly_dark'
+    fig.layout.template = 'simple_white'
     
     return fig
 
